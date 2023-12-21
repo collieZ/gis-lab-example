@@ -1,0 +1,1 @@
+export type OmitPartial<T, K extends keyof T> = Partial<Pick<T, Exclude<keyof T, K>>> & Pick<T, K>;
