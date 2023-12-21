@@ -12,7 +12,7 @@ import { useEventListener } from '@vueuse/core'
 import { throttle } from 'lodash-es'
 
 import * as dat from "dat.gui";
-import { onUnmounted } from 'vue';
+import { onUnmounted, onBeforeUnmount } from 'vue';
 import { CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 import { CSS3DObject } from 'three/addons/renderers/CSS3DRenderer';
 import { CSS2DRenderer } from 'three/addons/renderers/CSS2DRenderer.js';
@@ -144,11 +144,9 @@ const initScene = () => {
   // const tag = new CSS2DObject(div);
   const tag = new CSS3DSprite(div);
   // const tag = new CSS3DObject(div);
+  tag.name = 'testTag'
   tag.position.set(-20, 0, 0);
   div.style.pointerEvents = 'none';
-  onUnmounted(() => {
-    div.remove()
-  })
   gui.add(tag.position, 'x').name('x')
   gui.add(tag.position, 'y').name('y')
   gui.add(tag.position, 'z').name('z')
@@ -167,6 +165,14 @@ const initScene = () => {
 
   document.body.appendChild(css2Renderer.domElement);
 
+  onBeforeUnmount(() => {
+    console.log('销毁');
+    // let l =scene.getObjectByName('testTag')
+    // l?.parent?.remove(l)
+    meshA.remove(tag);
+    div.remove()
+    css2Renderer.domElement.remove()
+  })
   controls = createControls()
 
   camera.position.set(0, 20, -25)
@@ -193,7 +199,7 @@ const initScene = () => {
 }
 
 
-onMounted(() => {
+onMounted(() => {    
   initScene()
 })
 
