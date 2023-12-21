@@ -22,6 +22,7 @@ let camera: THREE.PerspectiveCamera
 const webglRef = ref(null)
 let textureA: any
 let textureDisp: any
+let stats: any;
 
 
 const initScene = () => {
@@ -106,7 +107,7 @@ const initScene = () => {
   // scene.add(axesHelper);
 
   //创建stats对象
-  const stats = new Stats();
+  stats = new Stats();
   stats.setMode(0)
   document.body.appendChild(stats.domElement);
 
@@ -209,6 +210,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   gui.destroy()
+  stats.domElement.remove()
 })
 </script>
 

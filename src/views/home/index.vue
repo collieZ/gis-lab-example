@@ -12,7 +12,7 @@
       </li>
     </ul>
     <NDivider></NDivider>
-    <NH2 prefix="bar" align-text>
+    <!-- <NH2 prefix="bar" align-text>
       <NText type="success">
         MapLibre GL
       </NText>
@@ -22,7 +22,7 @@
         <NButton @click="handleClick(item.name)">{{ item.title }}</NButton>
       </li>
     </ul>
-    <NDivider></NDivider>
+    <NDivider></NDivider> -->
     <NH2 prefix="bar" align-text>
       <NText type="success">
         Threejs

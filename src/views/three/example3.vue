@@ -25,6 +25,7 @@ import { datacar } from './assets/data_car'
 import { databoundaryline } from './assets/data_boundary_line'
 
 const gui = new dat.GUI();
+let stats: any;
 
 let yuandian = [106.334175108, 29.511784777]
 const points = carDataCoordinateTransform(yuandian, datacar.data, 2)
@@ -126,7 +127,7 @@ const initScene = () => {
   scene.add(axesHelper);
 
   //创建stats对象
-  const stats = new Stats();
+  stats = new Stats();
   stats.setMode(0)
   document.body.appendChild(stats.domElement);
 
@@ -156,6 +157,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   gui.destroy()
+  stats.domElement.remove()
 })
 
 // 创建地球 半径100

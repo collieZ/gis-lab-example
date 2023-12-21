@@ -24,7 +24,7 @@ import { CSS3DRenderer, CSS3DSprite } from 'three/addons/renderers/CSS3DRenderer
 
 
 const gui = new dat.GUI();
-
+let stats: any;
 
 let controls: OrbitControls
 let camera: THREE.PerspectiveCamera
@@ -126,7 +126,7 @@ const initScene = () => {
   scene.add(axesHelper);
 
   //创建stats对象
-  const stats = new Stats();
+  stats = new Stats();
   stats.setMode(0)
   document.body.appendChild(stats.domElement);
 
@@ -199,6 +199,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   gui.destroy()
+  stats.domElement.remove()
 })
 </script>
 

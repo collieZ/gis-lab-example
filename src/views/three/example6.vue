@@ -49,7 +49,7 @@ import { sidewalk } from './assets/data_corss'
 import { datalaneguidearrow } from './assets/data_lane_guide_arrow'
 import { datacar } from './assets/data_car'
 import { databoundaryline } from './assets/data_boundary_line'
-
+let stats: any;
 let viewPoint: THREE.Mesh
 const cameraswing = ref(false)
 const viewPointSwing = ref(false)
@@ -267,6 +267,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   gui.destroy()
+  stats.domElement.remove()
 })
 
 // 创建地球 半径100

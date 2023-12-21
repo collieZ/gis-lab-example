@@ -41,6 +41,7 @@ import * as dat from "dat.gui";
 import { onUnmounted } from 'vue';
 
 const gui = new dat.GUI();
+let stats: any;
 
 const cameraswing = ref(false)
 const viewPointSwing = ref(false)
@@ -216,7 +217,7 @@ const initScene = () => {
   scene.add(axesHelper);
 
   //创建stats对象
-  const stats = new Stats();
+  stats = new Stats();
   stats.setMode(0)
   document.body.appendChild(stats.domElement);
 
@@ -246,6 +247,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   gui.destroy()
+  stats.domElement.remove()
 })
 </script>
 
