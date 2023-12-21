@@ -133,10 +133,10 @@ const dispatchEvent: Record<string, any> = {
     return pre
   }, {} as any),
   /** minemap */
-  ...maplibreExample.reduce((pre, cur) => {
-    pre[cur.name] = () => { router.push({ name: cur.name }) }
-    return pre
-  }, {} as any),
+  // ...maplibreExample.reduce((pre, cur) => {
+  //   pre[cur.name] = () => { router.push({ name: cur.name }) }
+  //   return pre
+  // }, {} as any),
   /** three */
   ...threeExample.reduce((pre, cur) => {
     pre[cur.name] = () => { router.push({ name: cur.name }) }

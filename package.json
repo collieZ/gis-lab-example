@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.1.2",
-    "@wicv/maplibre": "^0.0.1",
     "cesium": "^1.112.0",
     "cesium-navigation-es6": "^3.0.8",
     "dat.gui": "^0.7.9",
