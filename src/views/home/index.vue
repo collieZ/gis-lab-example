@@ -112,6 +112,10 @@ const threeExample = [
     title: '7-three-扩散涟漪效果',
     name: 'ThreeExample7'
   },
+  {
+    title: '8-three-模型爆炸图',
+    name: 'ThreeExample8'
+  },
 ]
 
 const cesiumExample = [
@@ -122,6 +126,10 @@ const cesiumExample = [
   {
     title: '1-entity',
     name: 'CesiumExample1'
+  },
+  {
+    title: '2-mars3d-base',
+    name: 'CesiumExample2'
   },
 ]
 

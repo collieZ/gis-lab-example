@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@turf/turf": "^6.5.0",
     "@vueuse/core": "^10.1.2",
     "cesium": "^1.112.0",
     "cesium-navigation-es6": "^3.0.8",
@@ -18,7 +19,9 @@
     "gsap": "^3.12.2",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
-    "three": "^0.155.0",
+    "mars3d": "^3.7.0",
+    "mars3d-cesium": "^1.113.0",
+    "three": "^0.160.0",
     "vue": "^3.2.47",
     "vue-router": "^4.2.2"
   },
