@@ -131,6 +131,14 @@ const cesiumExample = [
     title: '2-mars3d-base',
     name: 'CesiumExample2'
   },
+  {
+    title: '3-mars3d-graphic',
+    name: 'CesiumExample3'
+  },
+  {
+    title: '4-mars3d-track',
+    name: 'CesiumExample4'
+  },
 ]
 
 
